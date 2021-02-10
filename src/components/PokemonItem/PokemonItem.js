@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
+import Card from "./../Card";
+import Icon from "./../Icon";
+
 const PokemonItem = (props) => {
 	return (
-		<div>
-			<img src={props.image} alt={props.name} />
+		<Card>
+			<Icon image={props.image} alt={props.name} />
 			<p>{props.name}</p>
-		</div>
+		</Card>
 	);
 };
 
