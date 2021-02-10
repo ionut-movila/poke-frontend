@@ -1,11 +1,18 @@
+import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import DetailsPage from "./pages/DetailsPage";
 import MainPage from "./pages/MainPage";
 
-function App() {
+const App = () => {
 	return (
-		<div className="App">
-			<MainPage />
-		</div>
+		<Router>
+			<Switch>
+				<Route path="/" exact component={MainPage} />
+				<Route path="/pokemon/details" exact component={DetailsPage} />
+				<Redirect to="/" />
+			</Switch>
+		</Router>
 	);
-}
+};
 
 export default App;
