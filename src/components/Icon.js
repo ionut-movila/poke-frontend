@@ -1,8 +1,8 @@
 import React from 'react';
 
 const imgStyles={
-    width: 200,
-    height: 200,
+    width: 50,
+    height: 50,
 }
 
 const Icon = (props) => {

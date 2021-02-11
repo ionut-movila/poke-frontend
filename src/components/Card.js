@@ -3,13 +3,15 @@ import styled from 'styled-components'
 
 const StyledCard = styled.div`
     box-sizing: border-box;
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
     background-color: red;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    height: 20%;
 `;
 
 const Card = (props) => {
