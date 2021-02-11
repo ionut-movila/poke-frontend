@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
 
 const DetailsPage = () => {
-    return (
-        <p>Details page</p>
-    );
-}
- 
+	return <Header title="Details page" />;
+};
+
 export default DetailsPage;

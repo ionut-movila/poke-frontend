@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Card from "./../Card";
-import Icon from "./../Icon";
+import Card from "./Card";
+import Icon from "./Icon";
 
 const StyledName = styled.h2`
 	text-align: center;

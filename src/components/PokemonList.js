@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import PokemonItem from "./PokemonItem/PokemonItem";
+import PokemonItem from "./PokemonItem";
 
 const StyledList = styled.div`
 	display: flex;

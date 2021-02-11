@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import PokemonList from '../components/PokemonList';
+import Header from '../components/Header';
+import PokemonList from "../components/PokemonList";
 
 const MainPage = (props) => {
-    const dummyPokemons = [
+	const dummyPokemons = [
 		{
 			id: 1,
 			name: "pikachu",
@@ -17,10 +18,13 @@ const MainPage = (props) => {
 				"https://static.pokemonpets.com/images/monsters-images-300-300/1-Bulbasaur.png",
 		},
 	];
-    
-    return (
-        <PokemonList pokemons={dummyPokemons}/>
-    );
-}
- 
+
+	return (
+		<React.Fragment>
+            <Header title="Pokemon Page"/>
+			<PokemonList pokemons={dummyPokemons} />
+		</React.Fragment>
+	);
+};
+
 export default MainPage;
