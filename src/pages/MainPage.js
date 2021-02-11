@@ -1,28 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import Header from '../components/Header';
+import { fetchPokemon } from "../api/Fetch.js";
+import Header from "../components/Header";
 import PokemonList from "../components/PokemonList";
 
+const getPokemons = () => {
+    let pokemonsArray = [];
+    for(let i = 0; i<=151; i++){
+        pokemonsArray.push(fetchPokemon(i));
+    }
+    return pokemonsArray;
+}
+
 const MainPage = (props) => {
-	const dummyPokemons = [
-		{
-			id: 1,
-			name: "pikachu",
-			image:
-				"https://i.pinimg.com/originals/f5/1d/08/f51d08be05919290355ac004cdd5c2d6.png",
-		},
-		{
-			id: 2,
-			name: "bulbasaur",
-			image:
-				"https://static.pokemonpets.com/images/monsters-images-300-300/1-Bulbasaur.png",
-		},
-	];
+	let pokemons = getPokemons();
+    console.log(pokemons);
 
 	return (
 		<React.Fragment>
-            <Header title="Pokemon Page"/>
-			<PokemonList pokemons={dummyPokemons} />
+			<Header title="Pokemon Page" />
+			<PokemonList pokemons={pokemons} />
 		</React.Fragment>
 	);
 };

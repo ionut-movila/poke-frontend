@@ -17,11 +17,11 @@ const PokemonList = (props) => {
 		<StyledList>
 			{props.pokemons.map((pokemon) => (
 				<PokemonItem
-					name={pokemon.name}
-					id={pokemon.id}
-					image={pokemon.image}
+					name={pokemon.data.name}
+					id={pokemon.data.id}
+					image={pokemon.data.sprites.front_default}
 				/>
-			))}
+            ))}
 		</StyledList>
 	);
 };

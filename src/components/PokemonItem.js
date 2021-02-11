@@ -12,7 +12,7 @@ const StyledName = styled.h2`
 const PokemonItem = (props) => {
 	return (
 		<Card>
-			<div style={{ display: "flex", flexDirection: "row" }}>
+			<div key={props.id} style={{ display: "flex", flexDirection: "row" }}>
 				<Icon image={props.image} alt={props.name} />
 				<StyledName>{props.name}</StyledName>
 			</div>
