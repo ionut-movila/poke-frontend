@@ -17,9 +17,9 @@ const PokemonList = (props) => {
 		<StyledList>
 			{props.pokemons.map((pokemon) => (
 				<PokemonItem
-					name={pokemon.data.name}
-					id={pokemon.data.id}
-					image={pokemon.data.sprites.front_default}
+					name={pokemon.name}
+					key={pokemon.id}
+					image={pokemon.sprites.front_default}
 				/>
             ))}
 		</StyledList>
