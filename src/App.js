@@ -7,10 +7,7 @@ import MainPage from "./pages/MainPage";
 
 const MainWrapper = styled.div`
 	background: url(${backgroundImage});
-    height: 100%;
-    width: 100%;
     display: block;
-    position: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -23,7 +20,7 @@ const App = () => {
 				<Switch>
 					<Route path="/" exact component={MainPage} />
 					<Route
-						path="/pokemon/details"
+						path="/:pokemonId/details"
 						exact
 						component={DetailsPage}
 					/>

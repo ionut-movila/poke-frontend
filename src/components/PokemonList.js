@@ -14,15 +14,20 @@ const PokemonList = (props) => {
 		return <p>No pokemon found</p>;
 	}
 
+	const { pokemons } = props;
+
 	return (
 		<StyledList>
-			{props.pokemons.map((pokemon) => (
-				<PokemonItem
-					name={pokemon.name}
-					key={pokemon.id}
-					image={pokemon.sprites.front_default}
-				/>
-			))}
+			{pokemons.map((pokemon) => {
+				return (
+					<PokemonItem
+						name={pokemon.name}
+						key={pokemon.id}
+                        id={pokemon.id}
+						image={pokemon.sprites.front_default}
+					/>
+				);
+			})}
 		</StyledList>
 	);
 };

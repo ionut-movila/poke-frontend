@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 import { getPokemon } from "../api/Fetch.js";
 import Header from "../components/Header";
 import PokemonList from "../components/PokemonList.js";
-import styled from "styled-components";
 
 const StyledPage = styled.div`
-	overflow: "auto";
+	/* overflow: "scroll"; */
 `;
 
 const MainPage = (props) => {
 	const [pokemons, setPokemons] = useState([]);
 
-	const getPokemon = async (pokemonId) => {
+	const getPokemons = (pokemonId) => {
 		let pokemon = {};
 		try {
 			// const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
@@ -34,8 +34,11 @@ const MainPage = (props) => {
 
 	useEffect(() => {
 		for (let i = 0; i < 151; i++) {
-			getPokemon(i);
+			getPokemons(i);
 		}
+        const pokemonsCopy = pokemons;
+        pokemonsCopy.sort((pokemon1, pokemon2) => (pokemon1.id > pokemon2.id) ? 1 : -1);
+        setPokemons(pokemonsCopy);
 	}, []);
 
 	return (
