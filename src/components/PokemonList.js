@@ -6,6 +6,7 @@ import PokemonItem from "./PokemonItem";
 const StyledList = styled.div`
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 `;
 
 const PokemonList = (props) => {
@@ -21,7 +22,7 @@ const PokemonList = (props) => {
 					key={pokemon.id}
 					image={pokemon.sprites.front_default}
 				/>
-            ))}
+			))}
 		</StyledList>
 	);
 };
