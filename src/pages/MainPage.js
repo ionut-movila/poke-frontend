@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { getPokemon } from "../api/Fetch.js";
 import Header from "../components/Header";
 import PokemonList from "../components/PokemonList.js";
 
