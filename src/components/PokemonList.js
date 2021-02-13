@@ -7,6 +7,7 @@ const StyledList = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+    margin: 40px;
 `;
 
 const PokemonList = (props) => {

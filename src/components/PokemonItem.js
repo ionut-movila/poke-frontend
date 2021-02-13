@@ -8,7 +8,7 @@ import Icon from "./Icon";
 const StyledName = styled.h2`
 	text-align: center;
 	font-size: 20px;
-	flex-grow: 1;
+    align-items: center;
 `;
 
 const PokemonItem = (props) => {

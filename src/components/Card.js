@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components'
 
 const StyledCard = styled.div`
-    box-sizing: border-box;
     border: 2px solid yellow;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: red;
+    background-color: yellowgreen;
     margin: 10px;
     padding: 10px;
-    width: 20%;
-    height: 20%;
+    width: calc(100% * (1/4) - 30px - 16px);
 `;
 
 const Card = (props) => {
