@@ -5,10 +5,10 @@ import SearchOption from "./SearchOption";
 
 const StyledHeader = styled.div`
 	padding-inline: 52px;
-    padding-block: 20px;
+	padding-block: 20px;
 	align-items: center;
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 `;
 
 const StyledTitle = styled.h2`
@@ -20,7 +20,7 @@ const Header = (props) => {
 	return (
 		<StyledHeader>
 			<StyledTitle>{props.title}</StyledTitle>
-			<SearchOption />
+			{props.isDashboardPage ? <SearchOption /> : null}
 		</StyledHeader>
 	);
 };

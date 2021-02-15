@@ -42,7 +42,7 @@ const MainPage = (props) => {
 
 	return (
 		<StyledPage>
-			<Header title="Pokemon Page" />
+			<Header title="Pokemon Page" isDashboardPage/>
 			<PokemonList pokemons={pokemons} />
 		</StyledPage>
 	);
