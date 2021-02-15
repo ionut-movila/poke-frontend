@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { ButtonTypes } from "../enums/ButtonTypes";
-import Button from "./Button";
+import Input from "./Input";
 
 const SearchOption = () => {
-	return <Button buttonType={ButtonTypes.SUBMIT} />;
+	const [searchItem, setSearchItem] = useState("");
+
+	useEffect(() => {}, [searchItem]);
+
+	return (
+		<form>
+			<Input
+				type="text"
+				name="searchValue"
+				onChange={(event) => setSearchItem(event.target.value)}
+			/>
+		</form>
+	);
 };
 
 export default SearchOption;

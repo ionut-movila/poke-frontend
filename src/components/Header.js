@@ -4,8 +4,11 @@ import styled from "styled-components";
 import SearchOption from "./SearchOption";
 
 const StyledHeader = styled.div`
-	padding: 10px;
+	padding-inline: 52px;
+    padding-block: 20px;
 	align-items: center;
+    display: flex;
+    justify-content: space-between;
 `;
 
 const StyledTitle = styled.h2`
