@@ -14,7 +14,7 @@ const StyledBadge = styled.b`
 const Badge = (props) => {
     return (
         <StyledBadge>
-            {props.content}
+            {props.children}
         </StyledBadge>
     );
 }

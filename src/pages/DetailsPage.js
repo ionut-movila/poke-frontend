@@ -43,7 +43,9 @@ const DetailsPage = (props) => {
 			</li>
 			<li>
 				{pokemon.types.map((element) => (
-					<Badge title={element.type.name} />
+					<Badge>
+                        {element.type.name}
+                    </Badge>
 				))}
 			</li>
 		</ul>
